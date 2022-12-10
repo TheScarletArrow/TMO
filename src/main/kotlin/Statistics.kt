@@ -24,7 +24,7 @@ class Statistics {
     fun calculateStatistics(
         modelStatistics: Array<Array<Array<Double>>>,
         runNumber: Int
-    ) {
+    ): Array<Array<Double>> {
         val statistics = modelStatistics[0]
 
         for (i: Int in 1..modelStatistics.size) {
@@ -37,6 +37,14 @@ class Statistics {
         }
         for (i: Int in 0..statistics.size) {
             statistics[i] = divideArrays(statistics[i], runNumber)
+        }
+
+        return statistics
+    }
+
+    fun printStatistics(statistics: Array<Array<Double>>, step:Int) {
+        for (i: Int in 0..statistics.size) {
+            println(statistics[i].contentToString())
         }
     }
 }
