@@ -47,8 +47,8 @@ typealias StatisticsData = Array<Array<Double>>
 
     fun printStatistics(statistics: Array<Array<Double>>, step:Int) {
 
-        for (element in statistics) {
+        for (i in statistics.indices) {
 
-            println(element.contentToString())
+            println("Шаг ${i+1} Время ${(i+1)*STEP_STATISTICS.toDouble()/1000} секунд "+ statistics[i].contentToString())
         }
     }

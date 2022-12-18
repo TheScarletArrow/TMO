@@ -42,9 +42,6 @@ fun main(args: Array<String>) {
         val element = simulationModel(simulationModelParam)
         statisticsData += element
     }
-    printStatistics(
-            calculateStatistics(statisticsData, NUMBER_OF_EXPERIMENTS)
-    , STEP_STATISTICS
-    )
+    printStatistics(calculateStatistics(statisticsData, NUMBER_OF_EXPERIMENTS), STEP_STATISTICS)
 
 }
