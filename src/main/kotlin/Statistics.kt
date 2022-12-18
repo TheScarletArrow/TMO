@@ -32,7 +32,7 @@ typealias StatisticsData = Array<Array<Double>>
 //        println( modelStatistics.contentToString())
 //        print modelStatistics
 
-        for (i in 1 until modelStatistics.size/2) {
+        for (i in 1 until modelStatistics.size) {
             var model = modelStatistics[i]
             for (j: Int in model.indices) {
                 var modelState = model[j]
