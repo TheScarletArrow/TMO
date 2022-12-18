@@ -9,7 +9,7 @@ val ACCEPT_INTENSIVITY: Int = 8 // интенсивность поступлен
 val SERVICE_INTENSIVITY: Int = 2 // интенсивность обслуживания заявок
 val TIME_LIMIT: Int = 1500
 val STEP_STATISTICS: Int = 100
-val NUMBER_OF_EXPERIMENTS: Int = 2000
+val NUMBER_OF_EXPERIMENTS: Int = 1000
 fun main(args: Array<String>) {
 
 //    println("First 10 BSD random numbers - seed 0")
@@ -43,6 +43,8 @@ fun main(args: Array<String>) {
         statisticsData += element
     }
     printStatistics(
-            calculateStatistics(statisticsData, NUMBER_OF_EXPERIMENTS), STEP_STATISTICS)
+            calculateStatistics(statisticsData, NUMBER_OF_EXPERIMENTS)
+    , STEP_STATISTICS
+    )
 
 }

@@ -79,7 +79,7 @@ fun simulationModel(simulationModelParam: SimulationModelParam): StatisticsData 
     )))
 
 
-    statisticsData.forEach { println(it.contentToString()) }
+//    statisticsData.forEach { println(it.contentToString()) }
 
     return statisticsData
 

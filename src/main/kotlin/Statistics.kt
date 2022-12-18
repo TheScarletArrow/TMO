@@ -32,22 +32,20 @@ typealias StatisticsData = Array<Array<Double>>
 //        println( modelStatistics.contentToString())
 //        print modelStatistics
 
-        for (i in 1 until modelStatistics.size/2) {
+        for (i in 1 until modelStatistics.size) {
             var model = modelStatistics[i]
             for (j: Int in model.indices) {
-                var modelState = model[j]
+                val modelState = model[j]
                 statistics[j] = sumArrays(statistics[j], modelState)
             }
         }
         for (i: Int in statistics.indices) {
             statistics[i] = divideArrays(statistics[i], runNumber)
         }
-
         return statistics
     }
 
     fun printStatistics(statistics: Array<Array<Double>>, step:Int) {
-// create array of doubles called result
 
         for (element in statistics) {
 
